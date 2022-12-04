@@ -1,0 +1,26 @@
+# Setting Files
+.DS_Store
+.idea
+.vscode
+
+# Directories
+build
+node_modules
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+allFiredEvents
+scTopics
+
+# Docs
+docs/modules/api
+
+contracts/.placeholder
+test/.placeholder
+deploy_mnemonic.key
