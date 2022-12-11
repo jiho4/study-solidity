@@ -4,6 +4,7 @@
 .vscode
 
 # Directories
+bin
 build
 node_modules
 
