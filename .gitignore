@@ -8,6 +8,10 @@ bin
 build
 node_modules
 
+# Secrets
+secrets
+*.env
+
 # Logs
 logs
 *.log

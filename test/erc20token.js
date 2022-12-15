@@ -5,3 +5,4 @@ contract('erc20token', function(accounts) {
     done();
   });
 });
+ 
