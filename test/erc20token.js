@@ -1,6 +1,6 @@
-contract('erc20token', function(accounts) {
+contract('ERC20token', function(accounts) {
   it("should assert true", function(done) {
-    var erc20token = erc20token.deployed();
+    var ERC20token = ERC20token.deployed();
     assert.isTrue(true);
     done();
   });

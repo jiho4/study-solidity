@@ -8,67 +8,67 @@ E-4: 0xE955787A1CB5d4cB0c40E7A986F154Df62e7D994
 F-5: 0x530584cd2685e37dB6c6516401f8F8BbD1B3C11b
 G-6: 0x71Ed8c9493654E55d8e329D223C538681DA3C66b
 
-supplyChain.deployed().then(function(instance) {return instance });
+SupplyChain.deployed().then(function(instance) {return instance });
 
 // Create 3 manufacturer participants (A, B, C)
-supplyChain.deployed().then(function(instance) {return instance.addParticipant("A","passA","0xa220013D141c725C32210415AAd4819A28FD749f","Manufacturer") });
-supplyChain.deployed().then(function(instance) {return instance.addParticipant("B","passB","0x0De8695e69C77DaC48b3Ef14743a61f99c25dDC5","Supplier") });
-supplyChain.deployed().then(function(instance) {return instance.addParticipant("C","passC","0x41F10e0F641C04E5aA325AF7435A10B57d22b762","Consumer") });
+SupplyChain.deployed().then(function(instance) {return instance.addParticipant("A","passA","0xa220013D141c725C32210415AAd4819A28FD749f","Manufacturer") });
+SupplyChain.deployed().then(function(instance) {return instance.addParticipant("B","passB","0x0De8695e69C77DaC48b3Ef14743a61f99c25dDC5","Supplier") });
+SupplyChain.deployed().then(function(instance) {return instance.addParticipant("C","passC","0x41F10e0F641C04E5aA325AF7435A10B57d22b762","Consumer") });
 
 // Create 2 supplier participants (D, E)
-supplyChain.deployed().then(function(instance) {return instance.addParticipant("D","passD","0x75dc17F079bC37021CF7C51a41B2BCc949C6d3Cd","Supplier") });
-supplyChain.deployed().then(function(instance) {return instance.addParticipant("E","passE","0xE955787A1CB5d4cB0c40E7A986F154Df62e7D994","Supplier") });
+SupplyChain.deployed().then(function(instance) {return instance.addParticipant("D","passD","0x75dc17F079bC37021CF7C51a41B2BCc949C6d3Cd","Supplier") });
+SupplyChain.deployed().then(function(instance) {return instance.addParticipant("E","passE","0xE955787A1CB5d4cB0c40E7A986F154Df62e7D994","Supplier") });
 
 // Create 2 consumer participants (F, G)
-supplyChain.deployed().then(function(instance) {return instance.addParticipant("F","passF","0x530584cd2685e37dB6c6516401f8F8BbD1B3C11b","Consumer") });
-supplyChain.deployed().then(function(instance) {return instance.addParticipant("G","passG","0x71Ed8c9493654E55d8e329D223C538681DA3C66b","Consumer") });
+SupplyChain.deployed().then(function(instance) {return instance.addParticipant("F","passF","0x530584cd2685e37dB6c6516401f8F8BbD1B3C11b","Consumer") });
+SupplyChain.deployed().then(function(instance) {return instance.addParticipant("G","passG","0x71Ed8c9493654E55d8e329D223C538681DA3C66b","Consumer") });
 
 // Get participant details
-supplyChain.deployed().then(function(instance) {return instance.getParticipant(0)});
-supplyChain.deployed().then(function(instance) {return instance.getParticipant(1)});
-supplyChain.deployed().then(function(instance) {return instance.getParticipant(2)});
-supplyChain.deployed().then(function(instance) {return instance.getParticipant(3)});
-supplyChain.deployed().then(function(instance) {return instance.getParticipant(4)});
-supplyChain.deployed().then(function(instance) {return instance.getParticipant(5)});
-supplyChain.deployed().then(function(instance) {return instance.getParticipant(6)});
+SupplyChain.deployed().then(function(instance) {return instance.getParticipant(0)});
+SupplyChain.deployed().then(function(instance) {return instance.getParticipant(1)});
+SupplyChain.deployed().then(function(instance) {return instance.getParticipant(2)});
+SupplyChain.deployed().then(function(instance) {return instance.getParticipant(3)});
+SupplyChain.deployed().then(function(instance) {return instance.getParticipant(4)});
+SupplyChain.deployed().then(function(instance) {return instance.getParticipant(5)});
+SupplyChain.deployed().then(function(instance) {return instance.getParticipant(6)});
 
 // Create 6 products 100, 101 (owned by A), 200, 201 (owned by B), 300, 301 (owned C)
-supplyChain.deployed().then(function(instance) {return instance.addProduct(0, "ABC", "100", "123", 11) });
-supplyChain.deployed().then(function(instance) {return instance.addProduct(0, "DEF", "101", "456", 12) });
-supplyChain.deployed().then(function(instance) {return instance.addProduct(1, "GHI", "200", "789", 13, {from: "0x0De8695e69C77DaC48b3Ef14743a61f99c25dDC5"}) });
-supplyChain.deployed().then(function(instance) {return instance.addProduct(1, "JKL", "201", "135", 14, {from: "0x0De8695e69C77DaC48b3Ef14743a61f99c25dDC5"}) });
-supplyChain.deployed().then(function(instance) {return instance.addProduct(2, "MNO", "300", "357", 15, {from: "0x41F10e0F641C04E5aA325AF7435A10B57d22b762"}) });
-supplyChain.deployed().then(function(instance) {return instance.addProduct(2, "PQR", "301", "759", 16, {from: "0x41F10e0F641C04E5aA325AF7435A10B57d22b762"}) });
+SupplyChain.deployed().then(function(instance) {return instance.addProduct(0, "ABC", "100", "123", 11) });
+SupplyChain.deployed().then(function(instance) {return instance.addProduct(0, "DEF", "101", "456", 12) });
+SupplyChain.deployed().then(function(instance) {return instance.addProduct(1, "GHI", "200", "789", 13, {from: "0x0De8695e69C77DaC48b3Ef14743a61f99c25dDC5"}) });
+SupplyChain.deployed().then(function(instance) {return instance.addProduct(1, "JKL", "201", "135", 14, {from: "0x0De8695e69C77DaC48b3Ef14743a61f99c25dDC5"}) });
+SupplyChain.deployed().then(function(instance) {return instance.addProduct(2, "MNO", "300", "357", 15, {from: "0x41F10e0F641C04E5aA325AF7435A10B57d22b762"}) });
+SupplyChain.deployed().then(function(instance) {return instance.addProduct(2, "PQR", "301", "759", 16, {from: "0x41F10e0F641C04E5aA325AF7435A10B57d22b762"}) });
 
 // Get product details
-supplyChain.deployed().then(function(instance) {return instance.getProduct(0) });
-supplyChain.deployed().then(function(instance) {return instance.getProduct(1) });
-supplyChain.deployed().then(function(instance) {return instance.getProduct(2) });
-supplyChain.deployed().then(function(instance) {return instance.getProduct(3) });
-supplyChain.deployed().then(function(instance) {return instance.getProduct(4) });
-supplyChain.deployed().then(function(instance) {return instance.getProduct(5) });
+SupplyChain.deployed().then(function(instance) {return instance.getProduct(0) });
+SupplyChain.deployed().then(function(instance) {return instance.getProduct(1) });
+SupplyChain.deployed().then(function(instance) {return instance.getProduct(2) });
+SupplyChain.deployed().then(function(instance) {return instance.getProduct(3) });
+SupplyChain.deployed().then(function(instance) {return instance.getProduct(4) });
+SupplyChain.deployed().then(function(instance) {return instance.getProduct(5) });
 
 // Move products along supply chain: Manufacturer=> Supplier=> Supplier=> Consumer
-supplyChain.deployed().then(function(instance) {return instance.newOwner(0, 3, 0, {from: "0xa220013D141c725C32210415AAd4819A28FD749f"}) });
-supplyChain.deployed().then(function(instance) {return instance.newOwner(1, 3, 3, {from: "0x0De8695e69C77DaC48b3Ef14743a61f99c25dDC5"}) });
-supplyChain.deployed().then(function(instance) {return instance.newOwner(2, 3, 4, {from: "0x41F10e0F641C04E5aA325AF7435A10B57d22b762"}) });
-supplyChain.deployed().then(function(instance) {return instance.newOwner(0, 3, 1, {from: "0xa220013D141c725C32210415AAd4819A28FD749f"}) });
-supplyChain.deployed().then(function(instance) {return instance.newOwner(2, 4, 5, {from: "0x41F10e0F641C04E5aA325AF7435A10B57d22b762"}) });
-supplyChain.deployed().then(function(instance) {return instance.newOwner(1, 4, 2, {from: "0x0De8695e69C77DaC48b3Ef14743a61f99c25dDC5"}) });
-supplyChain.deployed().then(function(instance) {return instance.newOwner(3, 6, 4, {from: "0x75dc17F079bC37021CF7C51a41B2BCc949C6d3Cd"}) });
-supplyChain.deployed().then(function(instance) {return instance.newOwner(3, 4, 1, {from: "0x75dc17F079bC37021CF7C51a41B2BCc949C6d3Cd"}) });
-supplyChain.deployed().then(function(instance) {return instance.newOwner(3, 4, 3, {from: "0x75dc17F079bC37021CF7C51a41B2BCc949C6d3Cd"}) });
-supplyChain.deployed().then(function(instance) {return instance.newOwner(4, 5, 2, {from: "0xE955787A1CB5d4cB0c40E7A986F154Df62e7D994"}) });
-supplyChain.deployed().then(function(instance) {return instance.newOwner(3, 4, 0, {from: "0x75dc17F079bC37021CF7C51a41B2BCc949C6d3Cd"}) });
-supplyChain.deployed().then(function(instance) {return instance.newOwner(4, 6, 0, {from: "0xE955787A1CB5d4cB0c40E7A986F154Df62e7D994"}) });
-supplyChain.deployed().then(function(instance) {return instance.newOwner(4, 5, 3, {from: "0xE955787A1CB5d4cB0c40E7A986F154Df62e7D994"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(0, 3, 0, {from: "0xa220013D141c725C32210415AAd4819A28FD749f"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(1, 3, 3, {from: "0x0De8695e69C77DaC48b3Ef14743a61f99c25dDC5"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(2, 3, 4, {from: "0x41F10e0F641C04E5aA325AF7435A10B57d22b762"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(0, 3, 1, {from: "0xa220013D141c725C32210415AAd4819A28FD749f"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(2, 4, 5, {from: "0x41F10e0F641C04E5aA325AF7435A10B57d22b762"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(1, 4, 2, {from: "0x0De8695e69C77DaC48b3Ef14743a61f99c25dDC5"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(3, 6, 4, {from: "0x75dc17F079bC37021CF7C51a41B2BCc949C6d3Cd"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(3, 4, 1, {from: "0x75dc17F079bC37021CF7C51a41B2BCc949C6d3Cd"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(3, 4, 3, {from: "0x75dc17F079bC37021CF7C51a41B2BCc949C6d3Cd"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(4, 5, 2, {from: "0xE955787A1CB5d4cB0c40E7A986F154Df62e7D994"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(3, 4, 0, {from: "0x75dc17F079bC37021CF7C51a41B2BCc949C6d3Cd"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(4, 6, 0, {from: "0xE955787A1CB5d4cB0c40E7A986F154Df62e7D994"}) });
+SupplyChain.deployed().then(function(instance) {return instance.newOwner(4, 5, 3, {from: "0xE955787A1CB5d4cB0c40E7A986F154Df62e7D994"}) });
 
-supplyChain.deployed().then(function(instance) {return instance.getProvenance(0) });
-supplyChain.deployed().then(function(instance) {return instance.getProvenance(1) });
-supplyChain.deployed().then(function(instance) {return instance.getProvenance(2) });
-supplyChain.deployed().then(function(instance) {return instance.getProvenance(3) });
-supplyChain.deployed().then(function(instance) {return instance.getProvenance(4) });
-supplyChain.deployed().then(function(instance) {return instance.getProvenance(5) });
+SupplyChain.deployed().then(function(instance) {return instance.getProvenance(0) });
+SupplyChain.deployed().then(function(instance) {return instance.getProvenance(1) });
+SupplyChain.deployed().then(function(instance) {return instance.getProvenance(2) });
+SupplyChain.deployed().then(function(instance) {return instance.getProvenance(3) });
+SupplyChain.deployed().then(function(instance) {return instance.getProvenance(4) });
+SupplyChain.deployed().then(function(instance) {return instance.getProvenance(5) });
 
 //
 //

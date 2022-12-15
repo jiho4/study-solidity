@@ -1,6 +1,6 @@
-var basicMath = artifacts.require("./basicMath.sol");
+var basicMath = artifacts.require("./BasicMath.sol");
 
-contract('basicMath', async accounts => {
+contract('BasicMath', async accounts => {
   it("the sum should not overflow", async () => {
     try {
       // Try to add 2^256 and 5 (should overflow and throw an exception)
